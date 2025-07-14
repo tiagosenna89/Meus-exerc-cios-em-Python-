@@ -33,7 +33,25 @@ print(sao_anagramas("Roma", "Amor"))  # True
 print(sao_anagramas("Python", "Typhon"))  # True
 print(sao_anagramas("ChatGPT", "GPTChat"))  # True
 print(sao_anagramas("Teste", "Best"))  # False
-Meu nome é Tiago Sena de Oliveira, profissional com experiência em Experiência do Cliente, Logística e atualmente cursando Análise e Desenvolvimento de Sistemas com foco em Python.  
+Meu nome é Tiago Sena de Oliveira.  
+
+expressões matemáticas 
+
+def validar_parenteses(expressao):
+    pilha = []
+    pares = {'(': ')', '[': ']', '{': '}'}
+
+    for char in expressao:
+        if char in pares:
+            pilha.append(char)
+        elif char in pares.values():
+            if not pilha or pares[pilha.pop()] != char:
+                return False
+    return not pilha
+
+# Exemplos
+print(validar_parenteses("(2+3)*[5/{7-3}]"))  # True
+print(validar_parenteses("(2+3]*5"))          # False
 
 ## Contato
 
